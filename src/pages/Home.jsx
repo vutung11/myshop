@@ -7,19 +7,21 @@ import Policy from '../components/Policy'
 import ProductCard from '../components/ProductCard'
 import Slider from '../components/Slider'
 import Store from '../components/Store'
+import IphoneList from './IphoneList'
 
 const Home = () => {
   return <React.Fragment>
           <Header/>
-          <Slider/>
+          {/* <Slider/> */}
           <Policy/>
           <div className='container_wdithbg'>
           <Category/>
-          <ProductCard/>
-          <ProductCard/>
-          <Store/>
-          <Footer/>
-          <CopyRight/>
+          <IphoneList/>
+           {/* <ProductCard/> */}
+          {/* <ProductCard/> */}
+          {/* <Store/> */}
+          {/* <Footer/> */}
+          {/* <CopyRight/> */}
 
           </div>
     </React.Fragment>
