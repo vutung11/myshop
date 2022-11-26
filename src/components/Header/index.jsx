@@ -13,7 +13,9 @@ const Header = () => {
     const { Search } = Input;
     return (
         <div className='container_header'>
-            <img src='https://cdn.tgdd.vn/mwgcart/topzone/images/mobile/logo-video.png?v=4' className='container_header--logo' alt="" />
+            <NavLink to={'/'}>
+                <img src='https://cdn.tgdd.vn/mwgcart/topzone/images/mobile/logo-video.png?v=4' className='container_header--logo' alt="" />
+            </NavLink>
             <ul className='container_header--menu'>
                 <li>iPhone</li>
                 <li>

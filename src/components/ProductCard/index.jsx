@@ -3,15 +3,11 @@ import React from 'react'
 import './index.css';
 
 const ProductCard = (props) => {
-    const {listIphone} = props;
-    console.log(listIphone)
+    const {data} = props;
   return (
     <div className='container_productcard'>
-        <div className="container_productcard-title">
-            <h2>iPhone</h2>
-        </div>
         <div className="container_productcard--wrap">
-            {listIphone && listIphone.data && listIphone.data.map((item,idx)=>(
+            {data && data.data && data.data.map((item,idx)=>(
                 <div className="container_productcard--box" key={idx}>
                     <label className='label'>Mới</label>
                     <img src={item.attributes.image} alt="" />

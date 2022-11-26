@@ -7,7 +7,12 @@ import Policy from '../components/Policy'
 import ProductCard from '../components/ProductCard'
 import Slider from '../components/Slider'
 import Store from '../components/Store'
+import AccessoryList from './AccessoryList'
+import IpadList from './IpadList'
 import IphoneList from './IphoneList'
+import MacList from './MacList'
+import SoundList from './SoundList'
+import WatchList from './WatchList'
 
 const Home = () => {
   return <React.Fragment>
@@ -17,11 +22,15 @@ const Home = () => {
           <div className='container_wdithbg'>
           <Category/>
           <IphoneList/>
-           {/* <ProductCard/> */}
-          {/* <ProductCard/> */}
-          {/* <Store/> */}
-          {/* <Footer/> */}
-          {/* <CopyRight/> */}
+          <MacList/>
+          <IpadList/>
+          <WatchList/>
+          <SoundList/>
+          <AccessoryList/>
+         
+          <Store/>
+          <Footer/> 
+          <CopyRight/>
 
           </div>
     </React.Fragment>
