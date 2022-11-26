@@ -9,7 +9,7 @@ const Policy = () => {
         <div className='container_policy'>
             <div className="container_policy--box">
                 <RightCircleOutlined />
-                <p>Mẫu mã đa dạng, chính hãng</p>
+                <p>Mẫu mã đa dạng<br/> chính hãng</p>
             </div>
             <div className="container_policy--box">
                 <RightCircleOutlined />
@@ -17,11 +17,11 @@ const Policy = () => {
             </div>
             <div className="container_policy--box">
                 <RightCircleOutlined />
-                <p>Bảo hành có cam kết tới 12 tháng</p>
+                <p>Bảo hành có cam kết <br/>tới 12 tháng</p>
             </div>
             <div className="container_policy--box">
                 <RightCircleOutlined />
-                <p>Có thể đổi trả tại Thegioididong và DienmayXANH</p>
+                <p>Có thể đổi trả tại <br/> Thegioididong và DienmayXANH</p>
             </div>
         </div>
     </div>
