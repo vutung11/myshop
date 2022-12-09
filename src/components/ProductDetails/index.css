@@ -1,0 +1,11 @@
+.productdetail_container-bg {
+    background-color: #3e3e3f;
+}
+
+.productdetail_container_box {
+    background-color: red;
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 15px 0;
+}

@@ -10,6 +10,8 @@ import './App.css';
 import Product from './pages/Product';
 import Users from './pages/Users';
 import Header from './components/Header';
+import ProductDetails from './components/ProductDetails';
+import ProductCategory from './components/ProductCategory';
 
 function App() {
   
@@ -23,9 +25,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
-        <Route path='/Content' element={<Content/>}/>
-        <Route path='/product' element={<Product/>}/>
-        <Route path='/product/:name/:id' element={<Product/>}/>
+        <Route path='/:category' element={<ProductCategory/>} />
+        <Route path='/:category/:id' element={<ProductDetails/>} />
         <Route path='/users' element={<Users/>}/>
         <Route path='*' element={<Page404/>}/>
       </Routes>

@@ -17,22 +17,39 @@ const Header = () => {
                 <img src='https://cdn.tgdd.vn/mwgcart/topzone/images/mobile/logo-video.png?v=4' className='container_header--logo' alt="" />
             </NavLink>
             <ul className='container_header--menu'>
+                <NavLink to={'/iphone'}>
                 <li>iPhone</li>
-                <li>
-                    Mac
-                </li>
-                <li>
-                    iPad
-                </li>
+                </NavLink>
+                <NavLink to={'/mac'}>
+                    <li>
+                      Mac
+                        </li>
+                </NavLink>
+                    
+                <NavLink to={'/ipad'}>
+                    <li>
+                        iPad
+                    </li>
+                    </NavLink>
+                
+                <NavLink to={'/watch'}>
                 <li>
                   Watch
                 </li>
+                    </NavLink>
+                
+                <NavLink to={'/am-thanh'}>
                 <li>
                   Âm thanh
                 </li>
+                    </NavLink>
+               
+                <NavLink to={'/phu-kien'}>
                 <li>
                    Phụ kiện
                 </li>
+                    </NavLink>
+                
                 <li>
                    TekZone
                 </li>
