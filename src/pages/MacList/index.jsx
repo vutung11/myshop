@@ -1,23 +1,23 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import ProductCard from '../../components/ProductCard'
+import { getAllMacbook } from '../../redux/macbookSlice'
 import './index.css'
 
 const MacList = () => {
-    const [data, setData] = useState(null);
+  const dispatch = useDispatch()
+  const { macbooks } = useSelector((state) => state.macbooks)
 
-    useEffect(()=>{
-        const fetchData = async() =>{
-            const response = await fetch('http://localhost:1337/api/macs');
-            const responseJson = await response.json();
+  console.log(macbooks)
 
-            setData(responseJson);
-        }
-        fetchData()
-    },[])
+  useEffect(() => {
+    dispatch(getAllMacbook())
+  }, [])
+
   return (
     <div className="container_productcard-title">
-            <h2>Mac</h2>
-    <ProductCard data={data}/>
+      <h2>Mac</h2>
+      <ProductCard data={macbooks} />
     </div>
   )
 }

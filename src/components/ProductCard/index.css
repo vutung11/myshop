@@ -16,6 +16,10 @@
     justify-content: space-between;
 }
 
+.container_productcard--wrap a {
+    text-decoration: none;
+}
+
 .container_productcard--box {
     background: #333;
     width: 280px;

@@ -15,24 +15,23 @@ import WatchList from './WatchList'
 
 const Home = () => {
   return <React.Fragment>
-          <Header/>
-          <Slider/>
-          <Policy/>
-          <div className='container_wdithbg'>
-          <Category/>
-          <IphoneList/>
-          <MacList/>
-          <IpadList/>
-          <WatchList/>
-          <SoundList/>
-          <AccessoryList/>
-         
-          <Store/>
-          <Footer/> 
-          <CopyRight/>
+    <Slider />
+    <Policy />
+    <div className='container_wdithbg'>
+      <Category />
+      <IphoneList />
+      <MacList />
+      {/* <IpadList />
+      <WatchList />
+      <SoundList />
+      <AccessoryList /> */}
 
-          </div>
-    </React.Fragment>
+      <Store />
+      <Footer />
+      <CopyRight />
+
+    </div>
+  </React.Fragment>
 }
 
 export default Home

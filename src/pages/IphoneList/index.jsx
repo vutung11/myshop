@@ -1,25 +1,24 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import ProductCard from '../../components/ProductCard';
+import { getAllIphone } from '../../redux/iphoneSlice';
 
 import './index.css';
 
 const IphoneList = () => {
-    const [data , setData] = useState(null);
 
-    useEffect(()=>{
-        const fetchData = async ()=>{
+  const { iphones } = useSelector((state) => state.iphones)
+  const dispatch = useDispatch();
 
-            const response = await fetch('http://localhost:1337/api/iphones');
-            const responseJson = await response.json();
+  useEffect(() => {
+    dispatch(getAllIphone())
+  }, [])
+  console.log(iphones, 121);
 
-            setData(responseJson)
-        }
-        fetchData()
-    },[])
   return (
     <div className="container_productcard-title">
-            <h2>iPhone</h2>
-    <ProductCard data={data} />
+      <h2>iPhone</h2>
+      <ProductCard data={iphones} />
     </div>
   )
 }
