@@ -1,15 +1,15 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import macbookApi from "../api/macbookApi";
+import watchApi from "../api/watchApi";
 
 const initialState = {
-    macbooks: [],
+    watches: [],
 
 }
-export const getAllMacbook = createAsyncThunk(
-    'macbooks/getall',
+export const getAllWatch = createAsyncThunk(
+    'watches/getall',
     async (value, { rejectWithValue }) => {
         try {
-            const data = await macbookApi.getAllMacbook();
+            const data = await watchApi.getAllWatch();
             return data;
 
         } catch (error) {
@@ -19,13 +19,13 @@ export const getAllMacbook = createAsyncThunk(
 )
 
 const macbookSlice = createSlice({
-    name: 'macbooks',
+    name: 'watches',
     initialState,
     reducers: {},
     extraReducers: (builder) => {
-        builder.addCase(getAllMacbook.fulfilled, (state, action) => {
-            if (state.macbooks.length === 0)
-                state.macbooks.push(...action.payload.data)
+        builder.addCase(getAllWatch.fulfilled, (state, action) => {
+            if (state.watches.length === 0)
+                state.watches.push(...action.payload.data)
         })
     }
 

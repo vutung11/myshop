@@ -1,7 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-import { Carousel } from 'antd';
-import { LeftOutlined, RightOutlined } from "@ant-design/icons";
+
 
 import './index.css';
 
@@ -10,9 +9,9 @@ const ProductCard = (props) => {
   return (
     <div className='container_productcard'>
       <div className="container_productcard--wrap">
-        {data?.map((item, idx) => (
-          <NavLink to={`/${item.attributes.product_category_name}/${item.id}`}>
-            <div className="container_productcard--box" key={idx}>
+        {data.map((item, idx) => (
+          <NavLink to={`/${item.id}`} key={item.id}>
+            <div className="container_productcard--box">
               <label className='label'>Mới</label>
               <img src={item.attributes.image} alt="" />
               <div className="container_product--box-content">

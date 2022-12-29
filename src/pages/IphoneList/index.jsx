@@ -10,14 +10,15 @@ const IphoneList = () => {
   const { iphones } = useSelector((state) => state.iphones)
   const dispatch = useDispatch();
 
+
   useEffect(() => {
     dispatch(getAllIphone())
   }, [])
-  console.log(iphones, 121);
 
   return (
     <div className="container_productcard-title">
       <h2>iPhone</h2>
+
       <ProductCard data={iphones} />
     </div>
   )

@@ -21,9 +21,9 @@ const Home = () => {
       <Category />
       <IphoneList />
       <MacList />
-      {/* <IpadList />
+      <IpadList />
       <WatchList />
-      <SoundList />
+      {/* <SoundList />
       <AccessoryList /> */}
 
       <Store />

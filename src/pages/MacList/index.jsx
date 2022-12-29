@@ -8,7 +8,6 @@ const MacList = () => {
   const dispatch = useDispatch()
   const { macbooks } = useSelector((state) => state.macbooks)
 
-  console.log(macbooks)
 
   useEffect(() => {
     dispatch(getAllMacbook())

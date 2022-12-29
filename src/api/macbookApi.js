@@ -2,7 +2,7 @@ import axiosClient from "./axiosClient";
 
 const macbookApi = {
     getAllMacbook: async () => {
-        const url = 'products';
+        const url = 'macs';
         return await axiosClient.get(url)
     }
 }

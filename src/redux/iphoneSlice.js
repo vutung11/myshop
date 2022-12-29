@@ -25,13 +25,8 @@ const iphoneSlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder.addCase(getAllIphone.fulfilled, (state, action) => {
-            console.log(action.payload)
-            action.payload.data.map(item => {
-                if (item.attributes.product_category_name === 'iphone') {
-                    state.iphones.push(item)
-                }
-                return null
-            })
+            if (state.iphones.length === 0)
+                state.iphones.push(...action.payload.data)
         })
     }
 

@@ -2,7 +2,7 @@ import axiosClient from "./axiosClient";
 
 const iphoneApi = {
     getAllIphone: async () => {
-        const url = 'products';
+        const url = 'iphones';
         return await axiosClient.get(url)
     }
 }

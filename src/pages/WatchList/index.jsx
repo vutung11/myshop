@@ -1,23 +1,21 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import ProductCard from '../../components/ProductCard';
+import { getAllWatch } from '../../redux/watchSlice';
 import './index.css';
 
 const WatchList = () => {
-    const [data, setData] = useState(null);
+  const dispatch = useDispatch()
+  const { watches } = useSelector((state) => state.watches)
 
-    useEffect(()=>{
-        const fetchData = async () =>{
-            const response = await fetch('http://localhost:1337/api/watches');
-            const responseJson = await response.json();
-            setData(responseJson)
-        }
-        fetchData()
+  useEffect(() => {
+    dispatch(getAllWatch())
+  })
 
-    },[])
   return (
     <div className="container_productcard-title">
-        <h2>Watch</h2>
-        <ProductCard data={data} />
+      <h2>Watch</h2>
+      <ProductCard data={watches} />
     </div>
   )
 }
