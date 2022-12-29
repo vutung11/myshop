@@ -18,7 +18,6 @@ const IphoneList = () => {
   return (
     <div className="container_productcard-title">
       <h2>iPhone</h2>
-
       <ProductCard data={iphones} />
     </div>
   )
