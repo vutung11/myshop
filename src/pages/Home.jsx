@@ -23,8 +23,8 @@ const Home = () => {
       <MacList />
       <IpadList />
       <WatchList />
-      {/* <SoundList />
-      <AccessoryList /> */}
+      <SoundList />
+      <AccessoryList />
 
       <Store />
       <Footer />
